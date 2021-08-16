@@ -1,3 +1,5 @@
+// Combined all reducers in to single index.js in actions folder
+
 export const increment = (number) => {
   return {
     type: "INCREMENT",

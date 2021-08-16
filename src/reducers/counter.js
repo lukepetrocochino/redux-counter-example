@@ -1,3 +1,5 @@
+// Individual reducers for each reducer type
+
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case "INCREMENT":

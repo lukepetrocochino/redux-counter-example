@@ -1,5 +1,7 @@
 import React from "react";
+//Must import useSelector and useDispatch
 import { useSelector, useDispatch } from "react-redux";
+//Must also import each action from the ./actions/index.js
 import { increment, decrement, logged } from "./actions";
 
 function App() {
