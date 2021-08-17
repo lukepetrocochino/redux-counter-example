@@ -16,7 +16,10 @@ function App() {
       <button onClick={() => dispatch(decrement())}>-1</button>
       <button onClick={() => dispatch(logged())}>Log In/Out</button>
       {isLogged ? (
-        <h3>Valuable information I shouldn't see unless logged in</h3>
+        <h3>
+          Top secret information that I shouldn't be able to see unless logged
+          in
+        </h3>
       ) : (
         ""
       )}
