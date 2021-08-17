@@ -9,6 +9,7 @@
 
 ### E.x:
 
+```
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case "INCREMENT":
@@ -20,24 +21,28 @@ const counterReducer = (state = 0, action) => {
   }
 };
 export default counterReducer;
+```
 
 5. Create an index.js in the reducers folder.
 6. Import the individual reducer files and create a new const called allReducers containing them.
 
 ### E.x:
 
+```
 const allReducers = combineReducers({
     counter: counterReducer,
     isLogged: loggedReducer,
 });
+```
 
 export default allReducers;
 
-7. Create an index.js in the actions folder. 
+7. Create an index.js in the actions folder.
 8. Declare the actions for each reducer.
 
 ### E.x:
 
+```
 export const increment = (number) => {
   return {
     type: "INCREMENT",
@@ -54,17 +59,20 @@ export const logged = () => {
     type: "SIGN_IN",
   };
 };
+```
 
 9. In the src/index.js import the allReducers from the reducers folder.
 10. In the src/index.js import the Provider from react-redux
 11. Declare a store containing all the reducers
 
-### E.x: 
+### E.x:
 
+```
 const store = createStore(
   allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+```
 
 (The window... argument is to allow better use of the Redux DevTools Chrome Extension)
 
@@ -74,13 +82,15 @@ const store = createStore(
 14. Also import the names of each ation from the actions folder.
 15. Below function in the app declare each reducer followed with useSelector((state) => state.REDUCER_NAME)
 
-### E.x: 
+### E.x:
 
+```
 function App() {
     const counter = useSelector((state) => state.counter)
     const isLogged = useSelector((state) => state.isLogged)
     const dispatch = useDispatch()
 }
+```
 
 DISPATCH MUST ALSO BE DECLARED
 
@@ -90,4 +100,6 @@ DISPATCH MUST ALSO BE DECLARED
 
 If the state was to be updated via a button... :
 
+```
 <button onClick={() => dispatch(increment())}> +1 </button>
+```
