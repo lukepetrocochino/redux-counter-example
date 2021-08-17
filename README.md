@@ -3,8 +3,11 @@
 ## Steps to incorporate Redux as a state handler:
 
 1. Create an actions folder and reducers folder in /src
+
 2. npm install redux (and react-redux if using React)
+
 3. In index.js "import { createStore } from "redux"
+
 4. Create seperate reducers in the reducers folder, with clear names explaining their purposes.
 
 ### E.x:
@@ -24,6 +27,7 @@ export default counterReducer;
 ```
 
 5. Create an index.js in the reducers folder.
+
 6. Import the individual reducer files and create a new const called allReducers containing them.
 
 ### E.x:
@@ -38,6 +42,7 @@ const allReducers = combineReducers({
 export default allReducers;
 
 7. Create an index.js in the actions folder.
+
 8. Declare the actions for each reducer.
 
 ### E.x:
@@ -62,7 +67,9 @@ export const logged = () => {
 ```
 
 9. In the src/index.js import the allReducers from the reducers folder.
+
 10. In the src/index.js import the Provider from react-redux
+
 11. Declare a store containing all the reducers
 
 ### E.x:
@@ -76,10 +83,12 @@ const store = createStore(
 
 (The window... argument is to allow better use of the Redux DevTools Chrome Extension)
 
-12. Wrap <App /> in the ReactDom with <Provider store={store}> ... </Provider>. This allows the store to be used in any page of the App.
+12. Wrap App in the ReactDom with `<Provider store={store}> ... </Provider>.` This allows the store to be used in any page of the App.
 
 13. In App.js import useSelector and useDispatch from react-redux
+
 14. Also import the names of each ation from the actions folder.
+
 15. Below function in the app declare each reducer followed with useSelector((state) => state.REDUCER_NAME)
 
 ### E.x:
