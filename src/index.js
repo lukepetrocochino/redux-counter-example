@@ -13,7 +13,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-//Wrap the App with Provider in order to allow every page in the App to have access to the reducers.
+// Wrap the App with Provider in order to allow every page in the App to have access to the reducers.
 ReactDOM.render(
   <Provider store={store}>
     <App />
