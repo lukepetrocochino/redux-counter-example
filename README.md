@@ -105,7 +105,7 @@ DISPATCH MUST ALSO BE DECLARED
 
 16. Then implement the state handlers in to your code.
 
-### E.x
+### E.x:
 
 If the state was to be updated via a button... :
 
