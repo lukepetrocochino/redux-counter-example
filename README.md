@@ -112,3 +112,20 @@ If the state was to be updated via a button... :
 ```
 <button onClick={() => dispatch(increment())}> +1 </button>
 ```
+
+17. You can add arguments as the action.payload (replace payload with argument) for actions.
+
+### E.x:
+
+```
+const counterReducer = (state = 0, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return state + action.payload;
+```
+
+The payload is where you can add an argument, for example if you passed the number 5 when dispatching the increment case, it would increment the state by 5 rather than the 1 that it was hard coded to originally.
+
+```
+<button onClick={() => dispatch(increment(5))}> Previously was +1, now is +5 </button>
+```
