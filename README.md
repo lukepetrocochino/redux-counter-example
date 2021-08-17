@@ -81,7 +81,7 @@ const store = createStore(
 );
 ```
 
-(The window... argument is to allow better use of the Redux DevTools Chrome Extension)
+(The window... argument is to allow better use of the [Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en))
 
 12. Wrap App in the ReactDom with `<Provider store={store}> ... </Provider>.` This allows the store to be used in any page of the App.
 
