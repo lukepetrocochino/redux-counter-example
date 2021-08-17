@@ -1,4 +1,4 @@
-# Used [Redux Documentation](https://redux.js.org/tutorials/quick-start) and [This YouTube Tutorial for simplicity](https://www.youtube.com/watch?v=CVpUuw9XSjY&ab_channel=DevEd)
+# Used [Redux Documentation](https://redux.js.org/tutorials/quick-start) and [This YouTube Tutorial](https://www.youtube.com/watch?v=CVpUuw9XSjY&ab_channel=DevEd) for simplicity
 
 ## Steps to incorporate Redux as a state handler:
 
